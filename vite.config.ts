@@ -1,18 +1,23 @@
-import { defineConfig } from "vite";
-import * as path from "node:path";
+import { defineConfig } from 'vite';
+import { resolve } from 'path'
+// @ts-ignore
+import handlebars from 'vite-plugin-handlebars';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [],
+  resolve: {
+    alias: { "@": resolve(__dirname, 'src') },
+  },
+  plugins: [handlebars()],
   server: {
     host: "0.0.0.0",
     port: 3000,
   },
-
   preview: { host: "0.0.0.0", port: 3000 },
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
+  css: {
+    preprocessorOptions: {
+      sass: {
+        api: 'modern-compiler'
+      }
+    }
+  }
 });
