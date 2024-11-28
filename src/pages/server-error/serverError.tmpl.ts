@@ -1,3 +1,4 @@
+// language=hbs
 export const serverErrorTmpl = `
     <main class="server-error">
         <div class="container">

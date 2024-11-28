@@ -1,3 +1,4 @@
+// language=hbs
 export const template = `
     <main class="signIn">
         <div class="container">
@@ -38,7 +39,7 @@ export const template = `
               <input class="input input_password-repeat" name="password-repeat" type="password">
             </div>
             
-            <button class="submit">{{ button }}</button>
+            <button class="submit">{{ buttonText }}</button>
           </form>
           <a class="link">Войти</a>
         </div>

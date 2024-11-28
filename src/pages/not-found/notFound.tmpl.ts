@@ -1,3 +1,4 @@
+// language=hbs
 export const notFoundTmpl = `
     <main class="not-found">
         <div class="container">

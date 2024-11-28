@@ -1,3 +1,4 @@
+// language=hbs
 export const signInTmpl = `
     <main class="signIn">
         <div class="container">
@@ -13,7 +14,7 @@ export const signInTmpl = `
               <input class="input input_password" name="password" type="password">
             </div>
             
-            <button class="submit">{{ button }}</button>
+            <button>{{ buttonText }}</button>
           </form>
           <a class="link">Нет аккаунта?</a>
         </div>
