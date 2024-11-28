@@ -5,7 +5,7 @@ import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
   resolve: {
-    alias: { "@": resolve(__dirname, 'src') },
+    alias: { "@": resolve(__dirname, './src') },
   },
   plugins: [handlebars()],
   server: {
