@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars';
-import './serverError.module.sass';
+import './serverError.sass';
 import { serverErrorTmpl } from './serverError.tmpl'
 
 export const serverError = () => Handlebars.compile(serverErrorTmpl)({
