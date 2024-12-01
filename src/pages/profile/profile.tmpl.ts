@@ -8,6 +8,7 @@ export const profileTmpl = `
           <div class="container">
               <div class="heading">
                   <img class="avatar" alt="avatar" src="#">
+                  <input class="file-upload hidden" name="avatar" type="file" accept="image/*"/>
                   <h3 class="name-title">{{ user.name }}</h3>
               </div>
   
@@ -34,8 +35,8 @@ export const profileTmpl = `
                     </div>
     
                     <div class="field">
-                        <label class="label label_nickname" for="nickname">Никнейм</label>
-                        <input class="input input_nickname disable" name="nickname" disabled value="{{ user.nickname }}">
+                        <label class="label label_nickname" for="display_name">Никнейм</label>
+                        <input class="input input_nickname disable" name="display_name" disabled value="{{ user.nickname }}">
                     </div>
     
                     <div class="field">
@@ -55,8 +56,8 @@ export const profileTmpl = `
               
               <form class="password-form hidden">
                   <div class="field">
-                      <label class="label label_old-password" for="old_password">Старый пароль</label>
-                      <input class="input input_old-password" name="old_password" type="password">
+                      <label class="label label_old-password" for="oldPassword">Старый пароль</label>
+                      <input class="input input_old-password" name="oldPassword" type="password">
                   </div>
   
                   <div class="field">
@@ -65,8 +66,8 @@ export const profileTmpl = `
                   </div>
   
                   <div class="field">
-                      <label class="label label_new-password" for="new_password">Новый пароль (ещё раз)</label>
-                      <input class="input input_new-password" name="new_password" type="password">
+                      <label class="label label_new-password" for="newPassword">Новый пароль (ещё раз)</label>
+                      <input class="input input_new-password" name="newPassword" type="password">
                   </div>
   
                   <button class="submit">{{ buttonText }}</button>
