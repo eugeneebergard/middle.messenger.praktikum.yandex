@@ -1,4 +1,3 @@
-import '@/assets/normalize.css'
 import '@/style.sass'
 
 import { signIn } from '@/pages/sign-in/'
