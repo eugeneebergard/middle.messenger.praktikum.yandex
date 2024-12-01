@@ -1,0 +1,45 @@
+@use '@/styles/mixins' as *
+
+.sign-up
+  display: flex
+  align-items: center
+  justify-content: center
+  .container
+    width: 545px
+    box-shadow: 0 5px 12px 0 #49484D26
+    border-radius: 12px
+    padding: 40px 30px 30px
+    box-sizing: border-box
+    text-align: center
+  .title
+    font-size: 20px
+    font-weight: 600
+    text-align: center
+  .grid-container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 0 25px
+  .field:not(:last-child)
+    margin-bottom: 45px
+  .form
+    margin: 30px 0 20px
+  .field
+    display: flex
+    flex-direction: column
+    position: relative
+  .label
+    @include defaultLabel
+    text-align: start
+  .input
+    @include defaultInput
+  .error
+    @include defaultError
+    position: absolute
+    bottom: -16px
+  .button
+    margin: 67px auto 0
+    width: 280px
+    padding: 12px 0
+    @include primaryButton
+  .link
+    @include defaultLink
