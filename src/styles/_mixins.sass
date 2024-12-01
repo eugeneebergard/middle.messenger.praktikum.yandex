@@ -1,0 +1,45 @@
+@use './variables' as *
+
+@mixin transition
+  transition: all .2s ease
+
+@mixin resetButton
+  outline: none
+  border: none
+  cursor: pointer
+
+@mixin linkReset
+  text-decoration: none
+
+@mixin defaultInput
+  border: none
+  border-bottom: 1px solid $secondary-color
+  padding: 8px 0
+  outline: none
+  &:focus
+    border-bottom: 1px solid $primary-color
+
+@mixin defaultError
+  font-size: 10px
+  color: $error-color
+
+@mixin defaultLabel
+  font-size: 12px
+  font-weight: 500
+  color: $secondary-color
+
+@mixin primaryButton
+  @include resetButton
+  @include transition
+  background-color: $primary-color
+  color: white
+  border-radius: 8px
+  &:hover
+    opacity: .9
+
+@mixin defaultLink
+  @include linkReset
+  @include transition
+  color: $primary-color
+  &:hover
+    opacity: .8
