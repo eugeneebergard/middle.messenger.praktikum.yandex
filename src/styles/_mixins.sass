@@ -19,13 +19,16 @@
 @mixin resetInput
   border: none
   outline: none
+  &:disabled
+    background-color: inherit
 
 @mixin defaultInput
   @include resetInput
-  border-bottom: 1px solid $secondary-color
+  border-bottom: 1px solid $input-border-color
   padding: 8px 0
   &:focus
     border-bottom: 1px solid $primary-color
+    color: $text-color
 
 @mixin defaultError
   font-size: 10px
@@ -48,8 +51,7 @@
 @mixin defaultLink
   @include resetLink
   @include transition
-  color: $primary-color
-  font-weight: 600
+  font-weight: 500
   &:hover
     opacity: .8
 
