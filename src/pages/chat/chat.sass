@@ -1,0 +1,107 @@
+@use '@/styles/variables' as *
+@use '@/styles/mixins' as *
+
+.chat
+  display: flex
+  .menu
+    width: 310px
+    height: 100vh
+    background-color: $chat-menu-background
+    border: 1px solid $chat-border-color
+    box-sizing: border-box
+    .menu-header
+      padding: 20px 10px 15px
+      border-bottom: 1px solid $chat-border-color
+      .link-container
+        display: flex
+        justify-content: end
+        margin-bottom: 20px
+        .link
+          @include resetLink
+          color: $secondary-color
+      .search
+        @include resetInput
+        width: 100%
+        padding: 10px 5px 10px 40px
+        box-sizing: border-box
+        border-radius: 5px
+        background-color: $chat-input-background
+    .chat-list
+      @include resetList
+      .chat-list-item
+        display: flex
+        justify-content: space-between
+        padding: 12px 10px
+        border-bottom: 1px solid $chat-border-color
+        .avatar-container
+          display: flex
+          justify-content: center
+          align-items: center
+          .avatar
+            border-radius: 50%
+            width: 47px
+            height: 47px
+        .content
+          width: 100%
+          padding: 0 10px
+        .name
+          font-size: 14px
+          margin: 0 0 5px
+        .last-message
+          color: $secondary-color
+          font-size: 12px
+          margin: 0
+        .time
+          color: $secondary-color
+          font-size: 10px
+
+  .chat-area
+    display: flex
+    flex-direction: column
+    width: calc(100% - 310px)
+    .chat-header
+      display: flex
+      align-items: center
+      height: 60px
+      justify-content: space-between
+      padding: 10px 20px
+      border-bottom: 1px solid $chat-border-color
+      box-sizing: border-box
+      .person-info
+        display: flex
+        align-items: center
+        justify-content: center
+        .avatar
+          border-radius: 50%
+          width: 34px
+          height: 34px
+        .name
+          margin-left: 10px
+      .options
+        @include resetButton
+        background-color: inherit
+        height: 15px
+    .chat-history
+      height: calc(100vh - 120px)
+    .chat-form
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 60px
+      padding: 10px 20px
+      border-top: 1px solid $chat-border-color
+      box-sizing: border-box
+      .input
+        @include resetInput
+        padding: 10px 20px
+        border-radius: 30px
+        margin: 0 10px
+        width: 100%
+        box-sizing: border-box
+        background-color: $chat-input-background
+      .attach
+        @include resetButton
+        height: 32px
+      .send
+        @include resetButton
+        height: 28px

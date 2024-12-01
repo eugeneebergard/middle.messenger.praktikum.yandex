@@ -8,14 +8,22 @@
   border: none
   cursor: pointer
 
-@mixin linkReset
+@mixin resetList
+  list-style: none
+  padding: 0
+  margin: 0
+
+@mixin resetLink
   text-decoration: none
 
-@mixin defaultInput
+@mixin resetInput
   border: none
+  outline: none
+
+@mixin defaultInput
+  @include resetInput
   border-bottom: 1px solid $secondary-color
   padding: 8px 0
-  outline: none
   &:focus
     border-bottom: 1px solid $primary-color
 
@@ -38,7 +46,7 @@
     opacity: .9
 
 @mixin defaultLink
-  @include linkReset
+  @include resetLink
   @include transition
   color: $primary-color
   font-weight: 600

@@ -32,5 +32,9 @@ export const chat = () => Handlebars.compile(chatTmpl)({
       time: '12:12',
       new: false,
     },
-  ]
+  ],
+  currentChat: {
+    companionName: 'Евгений',
+    history: []
+  }
 });
