@@ -1,8 +1,9 @@
 # EEChat
 Учебный проект в рамках курса Мидл Фронтенд-Разработчик от Яндекс.Практикум
 
-### [Ссылка на сайт](https://eechat.netlify.app/)
-### [Ссылка на макет в Figma](https://www.figma.com/design/JHAjI30t1AabH2oihvFeMd/EEChat?node-id=0-1&node-type=canvas&t=wIp9kKMmoh6w70wt-0)
+Проект доступен по адресу: https://eechat.netlify.app/
+
+[Ссылка на макет в Figma](https://www.figma.com/design/JHAjI30t1AabH2oihvFeMd/EEChat?node-id=0-1&node-type=canvas&t=wIp9kKMmoh6w70wt-0)
 
 ## Сборка проекта
 Установка зависимостей и запуск
