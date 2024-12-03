@@ -4,9 +4,13 @@
   transition: all .2s ease
 
 @mixin resetButton
+  @include transition
+  background-color: inherit
   outline: none
   border: none
   cursor: pointer
+  &:hover
+    opacity: .8
 
 @mixin resetList
   list-style: none
@@ -70,3 +74,13 @@
       margin: 20px 0 50px
     .link
       @include defaultLink
+
+@mixin pseudoIcon($url, $width, $height)
+  &:after
+    content: ""
+    display: block
+    height: $height
+    width: $width
+    background-size: $width $height
+    background-image: $url
+    background-repeat: no-repeat

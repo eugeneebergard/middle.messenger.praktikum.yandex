@@ -19,13 +19,22 @@
         .link
           @include resetLink
           color: $secondary-color
+      .search-container
+        @include pseudoIcon(url('@/assets/svg/loupe.svg'), 20px, 20px)
+        position: relative
+        &:after
+          left: 10px
+          top: calc(50% - 10px)
+          position: absolute
       .search
         @include resetInput
         width: 100%
-        padding: 10px 5px 10px 40px
+        padding: 10px 5px 10px 35px
         box-sizing: border-box
         border-radius: 5px
         background-color: $chat-input-background
+        position: relative
+
     .chat-list
       @include resetList
       .chat-list-item
@@ -81,8 +90,7 @@
           margin-left: 10px
       .options
         @include resetButton
-        background-color: inherit
-        height: 15px
+        @include pseudoIcon(url('@/assets/svg/options.svg'), 16px, 16px)
     .chat-history
       height: calc(100vh - 120px)
     .chat-form
@@ -103,7 +111,7 @@
         background-color: $chat-input-background
       .attach
         @include resetButton
-        height: 32px
+        @include pseudoIcon(url('@/assets/svg/clip.svg'), 36px, 36px)
       .send
         @include resetButton
-        height: 28px
+        @include pseudoIcon(url('@/assets/svg/arrow.svg'), 36px, 36px)

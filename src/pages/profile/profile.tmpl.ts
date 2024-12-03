@@ -2,12 +2,15 @@
 export const profileTmpl = `
     <main class="profile">
         <aside class="aside">
-            <a class="back" href="/"></a>
+            <a class="back" href="/" title="Назад к чатам"></a>
         </aside>
         <div class="content">
           <div class="container">
               <div class="heading">
-                  <img class="avatar" alt="avatar" src="#">
+                  <img 
+                    class="avatar" 
+                    alt="avatar" 
+                    src="{{#if user.avatar }}{{ user.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
                   <input class="file-upload hidden" name="avatar" type="file" accept="image/*"/>
                   <h3 class="name-title">{{ user.name }}</h3>
               </div>
