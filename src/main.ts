@@ -1,15 +1,15 @@
-import '@/style.sass'
+import '@/style.sass';
 
-import { signIn } from '@/pages/sign-in/'
-import { signUp } from '@/pages/sign-up/'
-import { chat } from '@/pages/chat/'
-import { profile } from '@/pages/profile'
-import { serverError } from '@/pages/server-error/'
-import { notFound } from '@/pages/not-found/'
+import { signIn } from '@/pages/sign-in/';
+import { signUp } from '@/pages/sign-up/';
+import { chat } from '@/pages/chat/';
+import { profile } from '@/pages/profile';
+import { serverError } from '@/pages/server-error/';
+import { notFound } from '@/pages/not-found/';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('#app');
-  const path = window.location.pathname
+  const path = window.location.pathname;
   const getTemplate = () => {
     switch (path) {
       case '/': return chat();
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       case '/server-error' : return serverError();
       default : return notFound();
     }
-  }
+  };
 
   root!.innerHTML = getTemplate();
-})
+});

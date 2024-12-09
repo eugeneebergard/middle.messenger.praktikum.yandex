@@ -7,4 +7,4 @@ export const notFoundTmpl = `
           <a class="link" href="/">Назад к чатам</a>
         </div>
     </main>
-`
+`;

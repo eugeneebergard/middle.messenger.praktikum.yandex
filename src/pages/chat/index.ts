@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 import './chat.sass';
-import { chatTmpl } from './chat.tmpl'
+import { chatTmpl } from './chat.tmpl';
 
 export const chat = () => Handlebars.compile(chatTmpl)({
   chats: [
@@ -38,6 +38,6 @@ export const chat = () => Handlebars.compile(chatTmpl)({
       name: 'Евгений',
       avatar: '',
     },
-    history: []
-  }
+    history: [],
+  },
 });

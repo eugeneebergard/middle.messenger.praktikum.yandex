@@ -5,4 +5,4 @@ export const labelTmpl = `
       for="{{ name }}"
       class="label {{className}}" 
     >
-`
+`;

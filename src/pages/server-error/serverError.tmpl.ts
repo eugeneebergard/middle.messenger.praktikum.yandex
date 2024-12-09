@@ -7,4 +7,4 @@ export const serverErrorTmpl = `
           <a class="link" href="/">Назад к чатам</a>
         </div>
     </main>
-`
+`;

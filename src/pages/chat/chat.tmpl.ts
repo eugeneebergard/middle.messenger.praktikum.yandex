@@ -50,4 +50,4 @@ export const chatTmpl = `
             </form>
         </div>
     </main>
-`
+`;

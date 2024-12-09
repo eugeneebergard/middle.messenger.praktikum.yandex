@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 import './profile.sass';
-import { profileTmpl } from './profile.tmpl'
+import { profileTmpl } from './profile.tmpl';
 
 export const profile = () => Handlebars.compile(profileTmpl)({
   user: {
@@ -10,7 +10,7 @@ export const profile = () => Handlebars.compile(profileTmpl)({
     first_name: 'Владимир',
     second_name: 'Плутин',
     phone: '89999999999',
-    nickname: 'Plutin'
+    nickname: 'Plutin',
   },
-  buttonText: 'Сохранить'
+  buttonText: 'Сохранить',
 });

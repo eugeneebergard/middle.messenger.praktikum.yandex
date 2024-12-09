@@ -21,4 +21,4 @@ export const signInTmpl = `
             <a class="link" href="/sign-up">Зарегистрироваться</a>
         </div>
     </main>
-`
+`;

@@ -7,4 +7,4 @@ export const inputTmpl = `
       class="input {{className}}" 
       placeholder="{{placeholder}}"
     >
-`
+`;

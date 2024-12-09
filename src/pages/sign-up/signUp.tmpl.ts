@@ -53,4 +53,4 @@ export const template = `
           <a class="link" href="/sign-in">Войти</a>
         </div>
     </main>
-`
+`;

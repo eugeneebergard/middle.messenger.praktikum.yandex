@@ -78,4 +78,4 @@ export const profileTmpl = `
           </div>
         </div>
     </main>
-`
+`;
