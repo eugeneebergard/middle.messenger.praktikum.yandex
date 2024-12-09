@@ -1,0 +1,121 @@
+@use './variables' as *;
+
+@mixin transition {
+  transition: all .2s ease;
+}
+
+@mixin resetButton {
+  @include transition;
+
+  background-color: inherit;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+@mixin resetList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin resetLink {
+  text-decoration: none;
+}
+
+@mixin resetInput {
+  border: none;
+  outline: none;
+
+  &:disabled {
+    background-color: inherit;
+  }
+}
+
+@mixin defaultInput {
+  @include resetInput;
+
+  border-bottom: 1px solid $input-border-color;
+  padding: 8px 0;
+
+  &:focus {
+    border-bottom: 1px solid $primary-color;
+    color: $text-color;
+  }
+}
+
+@mixin defaultError {
+  font-size: 10px;
+  color: $error-color;
+}
+
+@mixin defaultLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: $secondary-color;
+}
+
+@mixin primaryButton {
+  @include resetButton;
+  @include transition;
+
+  background-color: $primary-color;
+  color: white;
+  border-radius: 8px;
+
+  &:hover {
+    opacity: .9;
+  }
+}
+
+@mixin defaultLink {
+  @include resetLink;
+  @include transition;
+
+  font-weight: 500;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+@mixin errorPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    text-align: center;
+
+    .title {
+      font-size: 40px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+  .description {
+    font-size: 20px;
+    margin: 20px 0 50px;
+  }
+
+  .link {
+    @include defaultLink;
+  }
+}
+}
+
+@mixin pseudoIcon($url, $width, $height) {
+  &::after {
+    content: "";
+    display: block;
+    height: $height;
+    width: $width;
+    background-size: $width $height;
+    background-image: $url;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,6 @@
+
+@use '@/styles/mixins' as *;
+
+.server-error {
+  @include errorPage;
+}

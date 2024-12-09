@@ -1,0 +1,19 @@
+@use '@/assets/fonts';
+@use '@/assets/normalize';
+@use '@/styles/variables' as *;
+
+#app {
+  font-family: Inter, Arial, sans-serif;
+  color: $text-color;
+  font-weight: 500;
+
+  main {
+    min-height: 100vh;
+    font-size: 14px;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+

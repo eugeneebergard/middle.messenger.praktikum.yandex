@@ -1,0 +1,142 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.profile {
+  display: flex;
+
+  .aside {
+    width: 64px;
+    height: 100vh;
+    background-color: $chat-menu-background;
+    border-right: 1px solid $chat-border-color;
+    box-sizing: border-box;
+
+    .back {
+      @include transition;
+      @include pseudoIcon(url('@/assets/svg/arrow.svg'), 32px, 32px);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      transform: rotate(180deg);
+
+      &:hover {
+        opacity: .8;
+    }
+  }
+}
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 64px);
+}
+
+  .container {
+    box-sizing: border-box;
+}
+
+  .heading {
+    text-align: center;
+
+    .avatar {
+      display: block;
+      border-radius: 50%;
+      width: 130px;
+      height: 130px;
+      background-color: lightgray;
+      margin: 0 auto;
+  }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+  }
+}
+
+  .info-form {
+    margin: 40px 0 60px;
+    width: 585px;
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 25px;
+  }
+}
+
+  .password-form {
+    margin: 40px 0 60px;
+    width: 280px;
+
+    .field:not(:last-child) {
+      margin-bottom: 30px;
+  }
+}
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+  .label {
+    @include defaultLabel;
+
+    text-align: start;
+}
+
+  .input {
+    @include defaultInput;
+}
+
+  .error {
+    @include defaultError;
+
+    position: absolute;
+    bottom: -16px;
+}
+
+  .link {
+    @include defaultLink;
+}
+
+  .submit {
+    display: block;
+    margin: 67px auto 0;
+    width: 280px;
+    padding: 12px 0;
+
+    @include primaryButton;
+}
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .button {
+      @include resetButton;
+      @include defaultLink;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+  }
+
+    .edit-info,
+    .edit-password {
+      color: $primary-color;
+      background-color: inherit;
+  }
+
+    .logout {
+      color: $error-color;
+      background-color: inherit;
+  }
+}
+}
