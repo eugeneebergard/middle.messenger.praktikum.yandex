@@ -4,7 +4,7 @@
   transition: all .2s ease;
 }
 
-@mixin resetButton {
+@mixin reset-button {
   @include transition;
 
   background-color: inherit;
@@ -17,17 +17,17 @@
   }
 }
 
-@mixin resetList {
+@mixin reset-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-@mixin resetLink {
+@mixin reset-link {
   text-decoration: none;
 }
 
-@mixin resetInput {
+@mixin reset-input {
   border: none;
   outline: none;
 
@@ -36,8 +36,8 @@
   }
 }
 
-@mixin defaultInput {
-  @include resetInput;
+@mixin default-input {
+  @include reset-input;
 
   border-bottom: 1px solid $input-border-color;
   padding: 8px 0;
@@ -48,19 +48,19 @@
   }
 }
 
-@mixin defaultError {
+@mixin default-error {
   font-size: 10px;
   color: $error-color;
 }
 
-@mixin defaultLabel {
+@mixin default-label {
   font-size: 12px;
   font-weight: 500;
   color: $secondary-color;
 }
 
-@mixin primaryButton {
-  @include resetButton;
+@mixin primary-button {
+  @include reset-button;
   @include transition;
 
   background-color: $primary-color;
@@ -72,8 +72,8 @@
   }
 }
 
-@mixin defaultLink {
-  @include resetLink;
+@mixin default-link {
+  @include reset-link;
   @include transition;
 
   font-weight: 500;
@@ -83,19 +83,20 @@
   }
 }
 
-@mixin errorPage {
+@mixin error-page {
   display: flex;
   align-items: center;
   justify-content: center;
 
   .container {
     text-align: center;
+  }
 
-    .title {
-      font-size: 40px;
-      margin: 0;
-      font-weight: 600;
-    }
+  .title {
+    font-size: 40px;
+    margin: 0;
+    font-weight: 600;
+  }
 
   .description {
     font-size: 20px;
@@ -103,12 +104,11 @@
   }
 
   .link {
-    @include defaultLink;
+    @include default-link;
   }
 }
-}
 
-@mixin pseudoIcon($url, $width, $height) {
+@mixin pseudo-icon($url, $width, $height) {
   &::after {
     content: "";
     display: block;

@@ -7,11 +7,13 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "npm run build && node server.cjs",
-    "preview": "vite preview",
-    "lint": "npx eslint 'src/**/*.{js,ts}'",
-    "lint:fix": "npx eslint 'src/**/*.{js,ts}' --fix",
-    "lint:styles": "stylelint '**/*.scss'",
-    "lint:styles:fix": "stylelint '**/*.scss' --fix"
+    "type-check": "tsc --noEmit",
+    "eslint": "npx eslint 'src/**/*.{js,ts}' && npm run type-check",
+    "eslint:fix": "npx eslint 'src/**/*.{js,ts}' --fix && npm run type-check",
+    "stylelint": "npx stylelint '**/*.scss'",
+    "stylelint:fix": "npx stylelint '**/*.scss' --fix",
+    "lint": "npx eslint 'src/**/*.{js,ts}' && npx stylelint '**/*.scss' && npm run type-check",
+    "lint:fix": "npx eslint 'src/**/*.{js,ts}' --fix && npx stylelint '**/*.scss' --fix && npm run type-check"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -21,8 +23,7 @@
     "eslint-plugin-import": "^2.31.0",
     "sass": "^1.81.0",
     "stylelint": "^16.11.0",
-    "stylelint-config-recommended": "^14.0.1",
-    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-scss": "^6.10.0",
     "typescript": "~5.6.2",
     "vite": "^5.4.10",

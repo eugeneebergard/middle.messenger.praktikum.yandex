@@ -37,13 +37,13 @@ export const template = `
   
                 <div class="field">
                     <label class="label label_password" for="password">Пароль</label>
-                    <input class="input input_password" name="password" type="password">
+                    <input class="input input_password" name="password" type="password" autocomplete="on">
                     <span class="error hidden">например ошибка</span>
                 </div>
   
                 <div class="field">
                     <label class="label label_password-repeat" for="password-repeat">Повторите пароль</label>
-                    <input class="input input_password-repeat" name="password-repeat" type="password">
+                    <input class="input input_password-repeat" name="password-repeat" type="password" autocomplete="on">
                     <span class="error hidden">например ошибка</span>
                 </div>
             </div>

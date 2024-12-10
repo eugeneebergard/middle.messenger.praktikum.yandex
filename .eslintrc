@@ -17,7 +17,6 @@
   ],
   "rules": {
     "import/extensions": "off",
-    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "no-console": "off"
   }
 }

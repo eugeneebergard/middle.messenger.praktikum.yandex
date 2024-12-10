@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars';
-import './profile.sass';
+import './profile.scss';
 import { profileTmpl } from './profile.tmpl';
 
 export const profile = () => Handlebars.compile(profileTmpl)({

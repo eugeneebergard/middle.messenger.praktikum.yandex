@@ -1,4 +1,4 @@
-import '@/style.sass';
+import '@/style.scss';
 
 import { signIn } from '@/pages/sign-in/';
 import { signUp } from '@/pages/sign-up/';

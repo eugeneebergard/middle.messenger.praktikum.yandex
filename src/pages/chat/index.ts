@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars';
-import './chat.sass';
+import './chat.scss';
 import { chatTmpl } from './chat.tmpl';
 
 export const chat = () => Handlebars.compile(chatTmpl)({

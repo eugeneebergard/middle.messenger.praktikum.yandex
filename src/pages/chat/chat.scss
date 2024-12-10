@@ -21,14 +21,14 @@
         margin-bottom: 20px;
 
         .link {
-          @include resetLink;
+          @include reset-link;
 
           color: $secondary-color;
+        }
       }
-    }
 
       .search-container {
-        @include pseudoIcon(url('@/assets/svg/loupe.svg'), 20px, 20px);
+        @include pseudo-icon(url('@/assets/svg/loupe.svg'), 20px, 20px);
 
         position: relative;
 
@@ -36,11 +36,11 @@
           left: 10px;
           top: calc(50% - 10px);
           position: absolute;
+        }
       }
-    }
 
       .search {
-        @include resetInput;
+        @include reset-input;
 
         width: 100%;
         padding: 10px 5px 10px 35px;
@@ -48,11 +48,11 @@
         border-radius: 5px;
         background-color: $chat-input-background;
         position: relative;
+      }
     }
-  }
 
     .chat-list {
-      @include resetList;
+      @include reset-list;
 
       .chat-list-item {
         display: flex;
@@ -64,38 +64,38 @@
           display: flex;
           justify-content: center;
           align-items: center;
-
-          .avatar {
-            display: block;
-            border-radius: 50%;
-            width: 47px;
-            height: 47px;
         }
-      }
+
+        .avatar {
+          display: block;
+          border-radius: 50%;
+          width: 47px;
+          height: 47px;
+        }
 
         .content {
           width: 100%;
           padding: 0 10px;
-      }
+        }
 
         .name {
           font-size: 14px;
           margin: 0 0 5px;
-      }
+        }
 
         .last-message {
           color: $secondary-color;
           font-size: 12px;
           margin: 0;
-      }
+        }
 
         .time {
           color: $secondary-color;
           font-size: 10px;
+        }
       }
     }
   }
-}
 
   .chat-area {
     display: flex;
@@ -121,22 +121,22 @@
           border-radius: 50%;
           width: 34px;
           height: 34px;
-      }
+        }
 
         .name {
           margin-left: 10px;
+        }
+      }
+
+      .options {
+        @include reset-button;
+        @include pseudo-icon(url('@/assets/svg/options.svg'), 16px, 16px);
       }
     }
 
-      .options {
-        @include resetButton;
-        @include pseudoIcon(url('@/assets/svg/options.svg'), 16px, 16px);
-    }
-  }
-
     .chat-history {
       height: calc(100vh - 120px);
-  }
+    }
 
     .chat-form {
       display: flex;
@@ -148,7 +148,7 @@
       box-sizing: border-box;
 
       .input {
-        @include resetInput;
+        @include reset-input;
 
         padding: 10px 20px;
         border-radius: 30px;
@@ -156,17 +156,17 @@
         width: 100%;
         box-sizing: border-box;
         background-color: $chat-input-background;
-    }
+      }
 
       .attach {
-        @include resetButton;
-        @include pseudoIcon(url('@/assets/svg/clip.svg'), 36px, 36px);
-    }
+        @include reset-button;
+        @include pseudo-icon(url('@/assets/svg/clip.svg'), 36px, 36px);
+      }
 
       .send {
-        @include resetButton;
-        @include pseudoIcon(url('@/assets/svg/arrow.svg'), 36px, 36px);
+        @include reset-button;
+        @include pseudo-icon(url('@/assets/svg/arrow.svg'), 36px, 36px);
+      }
     }
   }
-}
 }
