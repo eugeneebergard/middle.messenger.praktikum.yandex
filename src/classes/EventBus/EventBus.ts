@@ -1,5 +1,5 @@
 import { TCallback, TListeners } from './EventBus.types';
-import { EVENTS } from '@/types';
+import { EVENTS } from '@/classes/Block/Block.types'
 
 export class EventBus {
   private readonly listeners: TListeners;
