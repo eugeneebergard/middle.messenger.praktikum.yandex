@@ -1,14 +1,17 @@
 import { EventBus } from '@/classes/EventBus';
-import { EVENTS } from './Block.types'
+import { EVENTS } from './Block.types';
 export class Block<P extends Record<string, unknown>> {
   static EVENTS = EVENTS;
 
   private _element: HTMLElement | null = null;
+
   private readonly _meta: { tagName: string; props: P } | null = null;
+
   private eventBus: () => EventBus;
+
   public props: P;
 
-  constructor(tagName: string = "div", props: P = {} as P) {
+  constructor(tagName: string = 'div', props: P = {} as P) {
     const eventBus = new EventBus();
     this._meta = {
       tagName,
@@ -23,18 +26,7 @@ export class Block<P extends Record<string, unknown>> {
     eventBus.emit(Block.EVENTS.INIT);
   }
 
-  private _registerEvents(eventBus: EventBus): void {
-    eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
-    eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
-    eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
-    eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
-  }
-
-  private _createResources(): void {
-    const { tagName } = this._meta!;
-    this._element = this._createDocumentElement(tagName);
-  }
-
+  // Жизненный цикл компонента
   init(): void {
     this._createResources();
     this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
@@ -64,22 +56,18 @@ export class Block<P extends Record<string, unknown>> {
     return !!(oldProps && newProps);
   }
 
+  // Обработчики событий
+  private _registerEvents(eventBus: EventBus): void {
+    eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
+    eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
+    eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
+    eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
+  }
+
+  // Методы для работы с пропсами
   setProps(nextProps: Partial<P>): void {
     if (!nextProps) return;
     Object.assign(this.props, nextProps);
-  }
-
-  get element(): HTMLElement | null {
-    return this._element;
-  }
-
-  private _render(): void {
-    const block = this.render();
-    this._element && (this._element.innerHTML = block);
-  }
-
-  render(): string {
-    return ""
   }
 
   private _makePropsProxy(props: P): P {
@@ -88,7 +76,7 @@ export class Block<P extends Record<string, unknown>> {
     return new Proxy(props, {
       get(target, prop) {
         const value = target[prop as keyof P];
-        return typeof value === "function" ? value.bind(target) : value;
+        return typeof value === 'function' ? value.bind(target) : value;
       },
       set(target, prop, value) {
         target[prop as keyof P] = value;
@@ -97,20 +85,41 @@ export class Block<P extends Record<string, unknown>> {
         return true;
       },
       deleteProperty() {
-        throw new Error("Нет доступа");
+        throw new Error('Нет доступа');
       },
     });
+  }
+
+  // Рендеринг и обновление DOM
+  private _createResources(): void {
+    const { tagName } = this._meta!;
+    this._element = this._createDocumentElement(tagName);
+  }
+
+  private _render(): void {
+    const block = this.render();
+    this._element && (this._element.innerHTML = block);
+  }
+
+  render(): string {
+    return '';
   }
 
   private _createDocumentElement(tagName: string): HTMLElement {
     return document.createElement(tagName);
   }
 
+  // Вспомогательные методы
+  get element(): HTMLElement | null {
+    return this._element;
+  }
+
   show(): void {
-    this.element && (this.element.style.display = "block");
+    this.element && (this.element.style.display = 'block');
   }
 
   hide(): void {
-    this.element && (this.element!.style.display = "none");
+    this.element && (this.element!.style.display = 'none');
   }
 }
+
