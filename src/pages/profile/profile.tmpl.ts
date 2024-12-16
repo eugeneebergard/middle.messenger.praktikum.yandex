@@ -19,61 +19,61 @@ export const profileTmpl = `
                   <div class="grid-container">
                     <div class="field">
                         <label class="label label_email" for="email">Электронная почта</label>
-                        <input class="input input_email disable" name="email" disabled value="{{ userData.email }}">
+                        {{{Input name="email" type="email" value=userData.email style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
                         <label class="label label_login" for="login">Логин</label>
-                        <input class="input input_login disable" name="login" disabled value="{{ userData.login }}">
+                        {{{Input name="login" value=userData.login style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
                         <label class="label label_first-name" for="first_name">Имя</label>
-                        <input class="input input_first-name disable" name="first_name" disabled value="{{ userData.first_name }}">
+                        {{{Input name="first_name" value=userData.first_name style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
                         <label class="label label_second_name" for="second_name">Фамилия</label>
-                        <input class="input input_second_name disable" name="second_name" disabled value="{{ userData.second_name }}">
+                        {{{Input name="second_name" value=userData.second_name style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
                         <label class="label label_nickname" for="display_name">Никнейм</label>
-                        <input class="input input_nickname disable" name="display_name" disabled value="{{ userData.nickname }}">
+                        {{{Input name="nickname" value=userData.nickname style="disable" disabled="true" }}}
                     </div>
     
                     <div class="field">
                         <label class="label label_phone" for="phone">Номер телефона</label>
-                        <input class="input input_phone disable" name="phone" type="number" disabled value="{{ userData.phone }}">
+                        {{{Input name="phone" type="number" value=userData.phone style="disable" disabled="true" required="true" }}}
                     </div>
                   </div>
 
-                  {{{Button type="submit primary" style="submit hidden" text=buttonText }}}
+                  {{{Button type="submit primary" style="submit hidden" text="Сохранить" }}}
               </form>
               
               <div class="controls">
                   {{{Button style="edit-info primary-link" text="Изменить данные" }}}
                   {{{Button style="edit-password primary-link" text="Изменить пароль" }}}
-                  {{{Button style="logout danger_link" text="Выйти" }}}
+                  {{{Button style="logout danger-link" text="Выйти" }}}
               </div>
               
               <form class="password-form hidden">
                   <div class="field">
                       <label class="label label_old-password" for="oldPassword">Старый пароль</label>
-                      <input class="input input_old-password" name="oldPassword" type="password">
+                      {{{Input name="oldPassword" type="password" value=userData.oldPassword required="true" }}}
                   </div>
   
                   <div class="field">
                       <label class="label label_password" for="password">Новый пароль</label>
-                      <input class="input input_password" name="password" type="password">
+                      {{{Input name="password" type="password" value=userData.password required="true" }}}
                   </div>
   
                   <div class="field">
                       <label class="label label_new-password" for="newPassword">Новый пароль (ещё раз)</label>
-                      <input class="input input_new-password" name="newPassword" type="password">
+                      {{{Input name="new-password" type="password" value=userData.new-password required="true" }}}
                   </div>
 
-                  {{{Button type="submit" style="submit primary" text=buttonText }}}
+                  {{{Button type="submit" style="submit primary" text="Сохранить" }}}
               </form>
           </div>
         </div>

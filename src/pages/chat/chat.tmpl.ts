@@ -45,7 +45,7 @@ export const chatTmpl = `
             <div class="chat-history"></div>
             <form class="chat-form">
                 {{{Button style="attach" title="Прикрепить" }}}
-                <input class="input" name="message" placeholder="Введите сообщение">
+                {{{Input name="message" placeholder="Введите сообщение" }}}
                 {{{Button style="send" title="Отправить" }}}
             </form>
         </div>

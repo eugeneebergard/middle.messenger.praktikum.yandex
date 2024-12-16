@@ -6,13 +6,13 @@ export const signInTmpl = `
             <form class="form">
                 <div class="field">
                     <label class="label label_login" for="login">Логин</label>
-                    <input class="input input_login" name="login">
+                    {{{Input name="login" }}}
                     <span class="error hidden">например ошибка</span>
                 </div>
                 
                 <div class="field">
                     <label class="label label_password" for="password">Пароль</label>
-                    <input class="input input_password" name="password" type="password" autocomplete="on">
+                    {{{Input name="password" type="password" autocomplete="on" }}}
                     <span class="error hidden">например ошибка</span>
                 </div>
                 

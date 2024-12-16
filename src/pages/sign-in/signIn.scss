@@ -41,10 +41,6 @@
     text-align: start;
   }
 
-  .input {
-    @include default-input;
-  }
-
   .error {
     @include default-error;
 
