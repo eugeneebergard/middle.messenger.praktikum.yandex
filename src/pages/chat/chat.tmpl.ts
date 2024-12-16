@@ -40,13 +40,13 @@ export const chatTmpl = `
                       src="{{#if chatData.currentChat.companion.avatar }}{{ this.companion.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
                     <h4 class="name">{{ chatData.currentChat.companion.name }}</h4>
                 </div>
-                <button class="options" title="Действия"></button>
+                {{{Button style="options" title="Действия" }}}
             </div>
             <div class="chat-history"></div>
             <form class="chat-form">
-                <button class="attach" title="Прикрепить"></button>
+                {{{Button style="attach" title="Прикрепить" }}}
                 <input class="input" name="message" placeholder="Введите сообщение">
-                <button class="send" title="Отправить"></button>
+                {{{Button style="send" title="Отправить" }}}
             </form>
         </div>
     </main>

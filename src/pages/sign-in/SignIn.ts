@@ -8,7 +8,7 @@ export class SignIn extends Block<TProps> {
       ...props,
       click: (e: Event) => {
         e.preventDefault();
-        console.log('click')
+        console.log('click');
       },
     });
   }

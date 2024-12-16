@@ -129,7 +129,6 @@
       }
 
       .options {
-        @include reset-button;
         @include pseudo-icon(url('@/assets/svg/options.svg'), 16px, 16px);
       }
     }
@@ -159,12 +158,10 @@
       }
 
       .attach {
-        @include reset-button;
         @include pseudo-icon(url('@/assets/svg/clip.svg'), 36px, 36px);
       }
 
       .send {
-        @include reset-button;
         @include pseudo-icon(url('@/assets/svg/arrow.svg'), 36px, 36px);
       }
     }

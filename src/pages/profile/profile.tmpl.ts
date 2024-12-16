@@ -47,14 +47,14 @@ export const profileTmpl = `
                         <input class="input input_phone disable" name="phone" type="number" disabled value="{{ userData.phone }}">
                     </div>
                   </div>
-  
-                  <button class="submit hidden">{{ buttonText }}</button>
+
+                  {{{Button type="submit primary" style="submit hidden" text=buttonText }}}
               </form>
               
               <div class="controls">
-                  <button class="button edit-info">Изменить данные</button>
-                  <button class="button edit-password">Изменить пароль</button>
-                  <button class="button logout">Выйти</button>
+                  {{{Button style="edit-info primary-link" text="Изменить данные" }}}
+                  {{{Button style="edit-password primary-link" text="Изменить пароль" }}}
+                  {{{Button style="logout danger_link" text="Выйти" }}}
               </div>
               
               <form class="password-form hidden">
@@ -72,8 +72,8 @@ export const profileTmpl = `
                       <label class="label label_new-password" for="newPassword">Новый пароль (ещё раз)</label>
                       <input class="input input_new-password" name="newPassword" type="password">
                   </div>
-  
-                  <button class="submit">{{ buttonText }}</button>
+
+                  {{{Button type="submit" style="submit primary" text=buttonText }}}
               </form>
           </div>
         </div>

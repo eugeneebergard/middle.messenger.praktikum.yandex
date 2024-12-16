@@ -1,0 +1,30 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
+
+.button {
+  @include reset-button;
+  @include transition;
+
+  border-radius: 8px;
+
+  &:hover {
+    opacity: .9;
+  }
+}
+
+.primary {
+  background-color: $primary-color;
+  color: white;
+}
+
+.primary-link {
+  @include default-link;
+
+  color: $primary-color
+}
+
+.danger-link {
+  @include default-link;
+
+  color: $error-color;
+}

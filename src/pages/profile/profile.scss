@@ -110,8 +110,6 @@
     margin: 67px auto 0;
     width: 280px;
     padding: 12px 0;
-
-    @include primary-button;
   }
 
   .controls {
@@ -120,23 +118,9 @@
     align-items: start;
 
     .button {
-      @include reset-button;
-      @include default-link;
-
       &:not(:last-child) {
         margin-bottom: 20px;
       }
-    }
-
-    .edit-info,
-    .edit-password {
-      color: $primary-color;
-      background-color: inherit;
-    }
-
-    .logout {
-      color: $error-color;
-      background-color: inherit;
     }
   }
 }
