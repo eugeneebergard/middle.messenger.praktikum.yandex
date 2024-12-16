@@ -10,41 +10,41 @@ export const profileTmpl = `
                   <img 
                     class="avatar" 
                     alt="avatar" 
-                    src="{{#if user.avatar }}{{ user.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
+                    src="{{#if userData.avatar }}{{ userData.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
                   <input class="file-upload hidden" name="avatar" type="file" accept="image/*"/>
-                  <h3 class="name-title">{{ user.name }}</h3>
+                  <h3 class="name-title">{{ userData.name }}</h3>
               </div>
   
               <form class="info-form">
                   <div class="grid-container">
                     <div class="field">
                         <label class="label label_email" for="email">Электронная почта</label>
-                        <input class="input input_email disable" name="email" disabled value="{{ user.email }}">
+                        <input class="input input_email disable" name="email" disabled value="{{ userData.email }}">
                     </div>
     
                     <div class="field">
                         <label class="label label_login" for="login">Логин</label>
-                        <input class="input input_login disable" name="login" disabled value="{{ user.login }}">
+                        <input class="input input_login disable" name="login" disabled value="{{ userData.login }}">
                     </div>
     
                     <div class="field">
                         <label class="label label_first-name" for="first_name">Имя</label>
-                        <input class="input input_first-name disable" name="first_name" disabled value="{{ user.first_name }}">
+                        <input class="input input_first-name disable" name="first_name" disabled value="{{ userData.first_name }}">
                     </div>
     
                     <div class="field">
                         <label class="label label_second_name" for="second_name">Фамилия</label>
-                        <input class="input input_second_name disable" name="second_name" disabled value="{{ user.second_name }}">
+                        <input class="input input_second_name disable" name="second_name" disabled value="{{ userData.second_name }}">
                     </div>
     
                     <div class="field">
                         <label class="label label_nickname" for="display_name">Никнейм</label>
-                        <input class="input input_nickname disable" name="display_name" disabled value="{{ user.nickname }}">
+                        <input class="input input_nickname disable" name="display_name" disabled value="{{ userData.nickname }}">
                     </div>
     
                     <div class="field">
                         <label class="label label_phone" for="phone">Номер телефона</label>
-                        <input class="input input_phone disable" name="phone" type="number" disabled value="{{ user.phone }}">
+                        <input class="input input_phone disable" name="phone" type="number" disabled value="{{ userData.phone }}">
                     </div>
                   </div>
   

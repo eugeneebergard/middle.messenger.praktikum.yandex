@@ -11,7 +11,7 @@ export const chatTmpl = `
                 </div>
             </div>
             <ul class="chat-list">
-                {{#each chats}}
+                {{#each chatData.chats}}
                     <li class="chat-list-item">
                         <div class="avatar-container">
                             <img 
@@ -37,8 +37,8 @@ export const chatTmpl = `
                     <img
                       class="avatar"
                       alt="avatar"
-                      src="{{#if currentChat.companion.avatar }}{{ this.companion.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
-                    <h4 class="name">{{ currentChat.companion.name }}</h4>
+                      src="{{#if chatData.currentChat.companion.avatar }}{{ this.companion.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
+                    <h4 class="name">{{ chatData.currentChat.companion.name }}</h4>
                 </div>
                 <button class="options" title="Действия"></button>
             </div>

@@ -1,5 +1,5 @@
 // language=hbs
-export const template = `
+export const signUpTmpl = `
     <main class="sign-up">
         <div class="container">
           <h1 class="title">Регистрация</h1>
@@ -48,7 +48,7 @@ export const template = `
                 </div>
             </div>
               
-            <button class="button">{{ buttonText }}</button>
+            <button class="button">Зарегистрироваться</button>
           </form>
           <a class="link" href="/sign-in">Войти</a>
         </div>

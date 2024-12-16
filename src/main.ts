@@ -1,25 +1,26 @@
 import '@/style.scss';
 
-import { signIn } from '@/pages/sign-in/';
-import { signUp } from '@/pages/sign-up/';
-import { chat } from '@/pages/chat/';
-import { profile } from '@/pages/profile';
-import { serverError } from '@/pages/server-error/';
-import { notFound } from '@/pages/not-found/';
+import { SignIn } from '@/pages/sign-in';
+import { SignUp } from '@/pages/sign-up';
+import { Chat } from '@/pages/chat';
+import { Profile } from '@/pages/profile';
+import { ServerError } from '@/pages/server-error';
+import { NotFound } from '@/pages/not-found'
+import { render } from '@/utils'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.querySelector('#app');
   const path = window.location.pathname;
-  const getTemplate = () => {
+
+  const currentPage = () => {
     switch (path) {
-      case '/': return chat();
-      case '/sign-in' : return signIn();
-      case '/sign-up' : return signUp();
-      case '/profile' : return profile();
-      case '/server-error' : return serverError();
-      default : return notFound();
+      case '/': return new Chat({});
+      case '/sign-in': return new SignIn({});
+      case '/sign-up': return new SignUp({});
+      case '/profile': return new Profile({});
+      case '/server-error': return new ServerError({});
+      default: return new NotFound({});
     }
   };
 
-  root!.innerHTML = getTemplate();
+  render(currentPage())
 });
