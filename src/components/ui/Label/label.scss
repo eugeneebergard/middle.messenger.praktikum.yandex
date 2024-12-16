@@ -2,5 +2,8 @@
 @use '@/styles/variables' as *;
 
 .label {
-  @include default-label;
+  text-align: start;
+  font-size: 12px;
+  font-weight: 500;
+  color: $secondary-color;
 }
