@@ -41,12 +41,6 @@
     }
   }
 
-  .label {
-    @include default-label;
-
-    text-align: start;
-  }
-
   .error {
     @include default-error;
 

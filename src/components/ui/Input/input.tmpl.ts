@@ -1,7 +1,7 @@
 // language=hbs
 export const inputTmpl = `
   <input
-    name="{{ name }}"
+    name="{{name}}"
     {{#if type}}type="{{type}}" {{/if}}
     {{#if value}}value="{{value}}" {{/if}}
     {{#if placeholder}}placeholder="{{placeholder}}" {{/if}}

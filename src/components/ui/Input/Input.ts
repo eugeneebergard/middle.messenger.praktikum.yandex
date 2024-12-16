@@ -11,7 +11,7 @@ export class Input extends Block<TProps> {
         change: props?.onChange,
         focus: props?.onFocus,
         blur: props?.onBlur,
-        input: props?.onInput
+        input: props?.onInput,
       },
     });
   }

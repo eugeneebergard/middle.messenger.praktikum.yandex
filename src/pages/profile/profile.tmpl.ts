@@ -18,32 +18,32 @@ export const profileTmpl = `
               <form class="info-form">
                   <div class="grid-container">
                     <div class="field">
-                        <label class="label label_email" for="email">Электронная почта</label>
+                        {{{Label name="email" text="Электронная почта" }}}
                         {{{Input name="email" type="email" value=userData.email style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
-                        <label class="label label_login" for="login">Логин</label>
+                        {{{Label name="login" text="Логин" }}}
                         {{{Input name="login" value=userData.login style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
-                        <label class="label label_first-name" for="first_name">Имя</label>
+                        {{{Label name="first_name" text="Имя" }}}
                         {{{Input name="first_name" value=userData.first_name style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
-                        <label class="label label_second_name" for="second_name">Фамилия</label>
+                        {{{Label name="second_name" text="Фамилия" }}}
                         {{{Input name="second_name" value=userData.second_name style="disable" disabled="true" required="true" }}}
                     </div>
     
                     <div class="field">
-                        <label class="label label_nickname" for="display_name">Никнейм</label>
-                        {{{Input name="nickname" value=userData.nickname style="disable" disabled="true" }}}
+                        {{{Label name="display_name" text="Никнейм" }}}
+                        {{{Input name="display_name" value=userData.display_name style="disable" disabled="true" }}}
                     </div>
     
                     <div class="field">
-                        <label class="label label_phone" for="phone">Номер телефона</label>
+                        {{{Label name="phone" text="Номер телефона" }}}
                         {{{Input name="phone" type="number" value=userData.phone style="disable" disabled="true" required="true" }}}
                     </div>
                   </div>
@@ -59,18 +59,18 @@ export const profileTmpl = `
               
               <form class="password-form hidden">
                   <div class="field">
-                      <label class="label label_old-password" for="oldPassword">Старый пароль</label>
-                      {{{Input name="oldPassword" type="password" value=userData.oldPassword required="true" }}}
+                      {{{Label name="oldPassword" text="Пароль" }}}
+                      {{{Input name="oldPassword" type="password" required="true" }}}
                   </div>
   
                   <div class="field">
-                      <label class="label label_password" for="password">Новый пароль</label>
-                      {{{Input name="password" type="password" value=userData.password required="true" }}}
+                      {{{Label name="newPassword" text="Новый пароль" }}}
+                      {{{Input name="newPassword" type="password" required="true" }}}
                   </div>
   
                   <div class="field">
-                      <label class="label label_new-password" for="newPassword">Новый пароль (ещё раз)</label>
-                      {{{Input name="new-password" type="password" value=userData.new-password required="true" }}}
+                      {{{Label name="repeatPassword" text="Повторите пароль" }}}
+                      {{{Input name="repeatPassword" type="password" required="true" }}}
                   </div>
 
                   {{{Button type="submit" style="submit primary" text="Сохранить" }}}

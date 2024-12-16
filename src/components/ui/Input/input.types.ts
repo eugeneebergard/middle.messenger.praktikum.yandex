@@ -12,4 +12,4 @@ export type TProps = {
   onBlur?: () => void;
   onInput?: () => void;
   events?: Record<string, unknown>
-}
+};
