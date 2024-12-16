@@ -1,11 +1,11 @@
-import { Block } from '@/classes/Block';
+import { Block } from '@/core/Block';
 import { chatTmpl } from './chat.tmpl';
-import { chatData } from '@/constants/mock'
+import { chatData } from '@/constants/mock';
 
 type TProps = Record<string, unknown>;
 export class Chat extends Block<TProps> {
   constructor(props: TProps) {
-    super('main', { ...props, chatData });
+    super({ ...props, chatData });
   }
 
   public render(): DocumentFragment {

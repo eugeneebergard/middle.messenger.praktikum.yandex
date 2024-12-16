@@ -1,2 +1,2 @@
 import './chat.scss';
-export { Chat } from './Chat'
+export { Chat } from './Chat';

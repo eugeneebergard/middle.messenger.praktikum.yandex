@@ -1,11 +1,11 @@
-import { Block } from '@/classes/Block';
+import { Block } from '@/core/Block';
 import { profileTmpl } from './profile.tmpl';
-import { userData } from '@/constants/mock'
+import { userData } from '@/constants/mock';
 
 type TProps = Record<string, unknown>;
 export class Profile extends Block<TProps> {
   constructor(props: TProps) {
-    super('main', { ...props, userData });
+    super({ ...props, userData });
   }
 
   public render(): DocumentFragment {

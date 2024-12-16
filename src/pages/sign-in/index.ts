@@ -1,2 +1,2 @@
 import './signIn.scss';
-export { SignIn } from './SignIn'
+export { SignIn } from './SignIn';

@@ -16,7 +16,7 @@ export const signInTmpl = `
                     <span class="error hidden">например ошибка</span>
                 </div>
                 
-                <button class="button">Авторизоваться</button>
+                {{{Button type="submit" text="Авторизоваться" }}}
             </form>
             <a class="link" href="/sign-up">Зарегистрироваться</a>
         </div>

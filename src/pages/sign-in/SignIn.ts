@@ -1,10 +1,16 @@
-import { Block } from '@/classes/Block';
+import { Block } from '@/core/Block';
 import { signInTmpl } from './signIn.tmpl';
 
 type TProps = Record<string, unknown>;
 export class SignIn extends Block<TProps> {
   constructor(props: TProps) {
-    super('main', { ...props });
+    super({
+      ...props,
+      click: (e: Event) => {
+        e.preventDefault();
+        console.log('click')
+      },
+    });
   }
 
   public render(): DocumentFragment {

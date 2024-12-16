@@ -1,10 +1,10 @@
-import { Block } from '@/classes/Block';
+import { Block } from '@/core/Block';
 import { signUpTmpl } from './signUp.tmpl';
 
 type TProps = Record<string, unknown>;
 export class SignUp extends Block<TProps> {
   constructor(props: TProps) {
-    super('main', { ...props });
+    super({ ...props });
   }
 
   public render(): DocumentFragment {

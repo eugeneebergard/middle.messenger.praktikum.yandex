@@ -5,8 +5,9 @@ import { SignUp } from '@/pages/sign-up';
 import { Chat } from '@/pages/chat';
 import { Profile } from '@/pages/profile';
 import { ServerError } from '@/pages/server-error';
-import { NotFound } from '@/pages/not-found'
-import { render } from '@/utils'
+import { NotFound } from '@/pages/not-found';
+import { renderRoot } from '@/core/helpers';
+import { registerAllComponents } from '@/components';
 
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
@@ -22,5 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  render(currentPage())
+  registerAllComponents();
+  renderRoot(currentPage());
 });

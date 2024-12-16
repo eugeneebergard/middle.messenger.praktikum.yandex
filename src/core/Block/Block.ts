@@ -1,26 +1,28 @@
-import { EventBus } from '@/classes/EventBus';
-import { EVENTS } from './Block.types';
 import Handlebars from 'handlebars';
 import { nanoid } from 'nanoid';
+import { EventBus } from '@/core/EventBus';
+import { EVENTS } from './Block.types';
 
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 export class Block<P extends Record<string, unknown>> {
   static EVENTS = EVENTS;
 
-  protected id: string = nanoid(8);
+  public id: string = nanoid(8);
+
   protected props: P;
+
   protected children: Record<string, Block<P> | Block<P>[]> = {};
 
   private _element: HTMLElement | null = null;
-  private readonly _tagName: string = 'div'
+
   private eventBus: EventBus;
 
-  constructor(tagName: string, propsAndChildren: P = {} as P) {
+  constructor(propsAndChildren: P = {} as P) {
     const { props, children } = this._getChildrenAndProps(propsAndChildren);
 
     this.eventBus = new EventBus();
     this.props = this._makePropsProxy(props);
     this.children = children;
-    this._tagName = tagName
 
     this._registerEvents();
     this.eventBus.emit(Block.EVENTS.INIT);
@@ -29,7 +31,6 @@ export class Block<P extends Record<string, unknown>> {
   // Запускает процесс инициализации, создавая элемент DOM (по умолчанию это <div>)
   // и инициирует рендеринг через событие FLOW_RENDER.
   public init(): void {
-    this._element = this._createDocumentElement(this._tagName);
     this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
   }
 
@@ -63,21 +64,16 @@ export class Block<P extends Record<string, unknown>> {
     return !!(oldProps && newProps);
   }
 
-  // Создаёт новый HTML-элемент с переданным тегом
-  private _createDocumentElement(tagName: string): HTMLElement {
-    return document.createElement(tagName);
-  }
-
   // Очищает текущий контент элемента, генерирует новый через метод render() и добавляет обработчики событий.
   private _render(): void {
-    const blockContent = this.render();
     this._removeEvents();
+    const renderedElem = this.render().firstElementChild as HTMLElement;
 
-    if (this._element) {
-      this._element.innerHTML = '';
-      this._element.appendChild(blockContent);
+    if (renderedElem && this._element) {
+      this._element.replaceWith(renderedElem);
     }
 
+    this._element = renderedElem;
     this._addEvents();
   }
 
@@ -90,7 +86,8 @@ export class Block<P extends Record<string, unknown>> {
   // Компилирует шаблон с использованием Handlebars,
   // затем заменяет заглушки для дочерних компонентов, добавляя их в скомпилированный HTML.
   protected compile(template: string, props: P): DocumentFragment {
-    const contextWithStubs = { ...props };
+    const contextWithStubs = { ...props, children: this.children };
+
     const compiledHTML = Handlebars.compile(template)(contextWithStubs);
     const templateElement = document.createElement('template');
 
@@ -189,7 +186,7 @@ export class Block<P extends Record<string, unknown>> {
 
   // Устанавливает стиль display: block для элемента, чтобы он был видим
   public show(): void {
-    this._element && (this._element.style.display = 'block')
+    this._element && (this._element.style.display = 'block');
   }
 
   // Устанавливает стиль display: none для элемента, чтобы скрыть его.
