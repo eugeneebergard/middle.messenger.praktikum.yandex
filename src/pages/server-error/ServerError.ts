@@ -1,5 +1,5 @@
 import { Block } from '@/core/Block';
-import { serverErrorTmpl } from './serverError.tmpl';
+import serverErrorTmpl from './serverError.hbs?raw';
 import { serverErrorReq } from '@/constants/mock';
 
 type TProps = Record<string, unknown>;

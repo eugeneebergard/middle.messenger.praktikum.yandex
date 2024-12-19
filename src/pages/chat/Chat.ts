@@ -1,5 +1,5 @@
 import { Block } from '@/core/Block';
-import { chatTmpl } from './chat.tmpl';
+import chatTmpl from './chat.hbs?raw';
 import { chatData } from '@/constants/mock';
 
 type TProps = Record<string, unknown>;

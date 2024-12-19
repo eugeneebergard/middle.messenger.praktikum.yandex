@@ -1,5 +1,5 @@
 import { Block } from '@/core/Block';
-import { signInTmpl } from './signIn.tmpl';
+import signInTmpl from './signIn.hbs?raw';
 
 type TProps = Record<string, unknown>;
 export class SignIn extends Block<TProps> {

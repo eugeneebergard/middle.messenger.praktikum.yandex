@@ -1,5 +1,5 @@
 import { Block } from '@/core/Block';
-import { profileTmpl } from './profile.tmpl';
+import profileTmpl from './profile.hbs?raw';
 import { userData } from '@/constants/mock';
 
 type TProps = Record<string, unknown>;

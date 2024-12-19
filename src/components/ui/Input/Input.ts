@@ -1,6 +1,6 @@
 import { Block } from '@/core/Block';
 import { TProps } from './input.types.ts';
-import { inputTmpl } from './input.tmpl.ts';
+import inputTmpl from './input.hbs?raw';
 import './input.scss';
 
 export class Input extends Block<TProps> {

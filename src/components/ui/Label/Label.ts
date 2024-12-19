@@ -1,6 +1,6 @@
 import { Block } from '@/core/Block';
 import { TProps } from './label.types.ts';
-import { labelTmpl } from './label.tmpl.ts';
+import labelTmpl from './label.hbs?raw';
 import './label.scss';
 
 export class Label extends Block<TProps> {
