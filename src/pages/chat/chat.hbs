@@ -12,10 +12,7 @@
       {{#each chatData.chats}}
         <li class="chat-list-item">
           <div class="avatar-container">
-            <img
-              class="avatar"
-              alt="avatar"
-              src="{{#if this.avatar }}{{ this.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
+            {{{Avatar avatar=this.avatar size="47px" }}}
           </div>
           <div class="content">
             <h3 class="name">{{ this.name }}</h3>
@@ -32,10 +29,7 @@
   <div class="chat-area">
     <div class="chat-header">
       <div class="person-info">
-        <img
-          class="avatar"
-          alt="avatar"
-          src="{{#if chatData.currentChat.companion.avatar }}{{ this.companion.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
+        {{{Avatar avatar=chatData.currentChat.companion.avatar size="34px" }}}
         <h4 class="name">{{ chatData.currentChat.companion.name }}</h4>
       </div>
       {{{Button style="options" title="Действия" }}}

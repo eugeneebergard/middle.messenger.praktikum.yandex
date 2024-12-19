@@ -5,10 +5,7 @@
   <div class="content">
     <div class="container">
       <div class="heading">
-        <img
-          class="avatar"
-          alt="avatar"
-          src="{{#if userData.avatar }}{{ userData.avatar }}{{else }}/images/empty-avatar.png{{/if }}">
+        {{{Avatar avatar=userData.avatar size="130px" }}}
         <input class="file-upload hidden" name="avatar" type="file" accept="image/*"/>
         <h3 class="name-title">{{ userData.name }}</h3>
       </div>

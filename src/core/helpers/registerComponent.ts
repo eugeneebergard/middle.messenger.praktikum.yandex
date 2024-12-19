@@ -16,7 +16,7 @@ export function registerComponent<P extends Record<string, unknown>>(name: strin
     const id = instance.id;
     this.children[id] = instance;
 
-    return `<div data-id="${id}"></div>`;
+    return `<div data-id="${id}">${instance.getContent()?.outerHTML || ''}</div>`;
   });
 }
 
