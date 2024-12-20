@@ -48,40 +48,6 @@
 
     .chat-list {
       @include reset-list;
-
-      .chat-list-item {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px 10px;
-        border-bottom: 1px solid $chat-border-color;
-
-        .avatar-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .content {
-          width: 100%;
-          padding: 0 10px;
-        }
-
-        .name {
-          font-size: 14px;
-          margin: 0 0 5px;
-        }
-
-        .last-message {
-          color: $secondary-color;
-          font-size: 12px;
-          margin: 0;
-        }
-
-        .time {
-          color: $secondary-color;
-          font-size: 10px;
-        }
-      }
     }
   }
 

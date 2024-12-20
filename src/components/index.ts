@@ -4,10 +4,12 @@ import { Button } from '@/components/ui';
 import { Input } from '@/components/ui';
 import { Label } from '@/components/ui';
 import { Avatar } from '@/components/ui';
+import { ChatItem } from '@/components/ChatItem'
 
 export const registerAllComponents = () => {
   registerComponent('Button', Button as typeof Block);
   registerComponent('Input', Input as typeof Block);
   registerComponent('Label', Label as typeof Block);
   registerComponent('Avatar', Avatar as typeof Block);
+  registerComponent('ChatItem', ChatItem as typeof Block);
 };
