@@ -1,5 +1,5 @@
 <button
   {{#if type}}type="{{type}}" {{/if}}
   {{#if title}}title="{{title}}" {{/if}}
-  class="button {{style}}"
+  class="{{#if style}}{{style}} {{else}}button {{/if}}{{#if className}}{{className}}{{/if}}"
 >{{text}}</button>

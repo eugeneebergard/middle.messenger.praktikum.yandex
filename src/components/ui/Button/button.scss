@@ -1,7 +1,7 @@
 @use '@/styles/mixins' as *;
 @use '@/styles/variables' as *;
 
-.button {
+@mixin default-button {
   @include reset-button;
   @include transition;
 
@@ -12,18 +12,26 @@
   }
 }
 
+.button {
+  @include default-button;
+}
+
 .primary {
+  @include default-button;
+
   background-color: $primary-color;
   color: white;
 }
 
 .primary-link {
+  @include default-button;
   @include default-link;
 
   color: $primary-color
 }
 
 .danger-link {
+  @include default-button;
   @include default-link;
 
   color: $error-color;
