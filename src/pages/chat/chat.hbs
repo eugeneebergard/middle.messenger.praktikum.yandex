@@ -5,7 +5,7 @@
         <a class="link" href="/profile">Профиль</a>
       </div>
       <div class="search-container">
-        <input class="search" placeholder="Поиск">
+        {{{Input name="search" style="search chat-input" placeholder="Поиск" }}}
       </div>
     </div>
     <ul class="chat-list">
@@ -37,7 +37,7 @@
     <div class="chat-history"></div>
     <form class="chat-form">
       {{{Button style="attach" title="Прикрепить" }}}
-      {{{Input name="message" placeholder="Введите сообщение" }}}
+      {{{Input name="message" style="field-message chat-input" placeholder="Введите сообщение" }}}
       {{{Button style="send" title="Отправить" }}}
     </form>
   </div>

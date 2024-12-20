@@ -3,6 +3,7 @@ export type TProps = {
   style?: string;
   type?: string;
   value?: string;
+  title?: string
   placeholder?: string;
   autocomplete?: string;
   disabled?: string;

@@ -40,13 +40,8 @@
       }
 
       .search {
-        @include reset-input;
-
-        width: 100%;
         padding: 10px 5px 10px 35px;
-        box-sizing: border-box;
         border-radius: 5px;
-        background-color: $chat-input-background;
         position: relative;
       }
     }
@@ -132,15 +127,10 @@
       border-top: 1px solid $chat-border-color;
       box-sizing: border-box;
 
-      .input {
-        @include reset-input;
-
+      .field-message {
         padding: 10px 20px;
         border-radius: 30px;
         margin: 0 10px;
-        width: 100%;
-        box-sizing: border-box;
-        background-color: $chat-input-background;
       }
 
       .attach {

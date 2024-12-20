@@ -3,8 +3,9 @@
   {{#if type}}type="{{type}}" {{/if}}
   {{#if value}}value="{{value}}" {{/if}}
   {{#if placeholder}}placeholder="{{placeholder}}" {{/if}}
+  {{#if title}}title="{{title}}" {{elseif placeholder}}title="{{placeholder}}" {{/if}}
   {{#if autocomplete}}autocomplete="on" {{/if}}
   {{#if disabled}}disabled="disabled" {{/if}}
   {{#if required}}required {{/if}}
-  class="input {{style}}"
+  class="{{#if style}}{{style}}{{else}}input {{/if}}"
 >

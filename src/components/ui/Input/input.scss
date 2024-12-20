@@ -12,3 +12,12 @@
     color: $text-color;
   }
 }
+
+.chat-input {
+  @include reset-input;
+
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $chat-input-background;
+  position: relative;
+}
