@@ -1,10 +1,10 @@
 import { Block } from '@/core/Block';
-import { TProps } from './label.types.ts';
+import { TLabelProps } from './label.types.ts';
 import labelTmpl from './label.hbs?raw';
 import './label.scss';
 
-export class Label extends Block<TProps> {
-  constructor(props: TProps) {
+export class Label extends Block<TLabelProps> {
+  constructor(props: TLabelProps) {
     super({ ...props });
   }
 

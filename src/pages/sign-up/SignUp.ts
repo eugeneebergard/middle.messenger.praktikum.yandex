@@ -1,9 +1,9 @@
 import { Block } from '@/core/Block';
 import signUpTmpl from './signUp.hbs?raw';
 
-type TProps = Record<string, unknown>;
-export class SignUp extends Block<TProps> {
-  constructor(props: TProps) {
+type TSignUpProps = Record<string, unknown>;
+export class SignUp extends Block<TSignUpProps> {
+  constructor(props: TSignUpProps) {
     super({ ...props });
   }
 

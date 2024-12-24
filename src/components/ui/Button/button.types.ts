@@ -1,4 +1,4 @@
-export type TProps = {
+export type TButtonProps = {
   text?: string;
   type?: string,
   style?: string,

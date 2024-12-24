@@ -1,4 +1,4 @@
-export type TProps = {
+export type TFieldProps = {
   //field
   className?: string;
   //input

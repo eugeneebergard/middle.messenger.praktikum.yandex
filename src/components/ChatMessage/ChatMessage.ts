@@ -1,13 +1,10 @@
 import { Block } from '@/core/Block';
+import { TChatMessageProps } from './chatMessage.types.ts';
 import chatMessageTmpl from './chatMessage.hbs?raw';
 import './chatMessage.scss';
 
-type TProps = {
-  chatMessage: Record<string, unknown>;
-};
-
-export class ChatMessage extends Block<TProps> {
-  constructor(props: TProps) {
+export class ChatMessage extends Block<TChatMessageProps> {
+  constructor(props: TChatMessageProps) {
     super({ ...props });
   }
 

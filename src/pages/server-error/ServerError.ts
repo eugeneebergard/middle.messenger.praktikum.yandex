@@ -2,9 +2,9 @@ import { Block } from '@/core/Block';
 import serverErrorTmpl from './serverError.hbs?raw';
 import { serverErrorReq } from '@/constants/mock';
 
-type TProps = Record<string, unknown>;
-export class ServerError extends Block<TProps> {
-  constructor(props: TProps) {
+type TServerErrorProps = Record<string, unknown>;
+export class ServerError extends Block<TServerErrorProps> {
+  constructor(props: TServerErrorProps) {
     super({ ...props, serverErrorReq });
   }
 

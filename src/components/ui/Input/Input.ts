@@ -1,10 +1,10 @@
 import { Block } from '@/core/Block';
-import { TProps } from './input.types.ts';
+import { TInputProps } from './input.types.ts';
 import inputTmpl from './input.hbs?raw';
 import './input.scss';
 
-export class Input extends Block<TProps> {
-  constructor(props: TProps) {
+export class Input extends Block<TInputProps> {
+  constructor(props: TInputProps) {
     super({
       ...props,
       events: {

@@ -1,4 +1,4 @@
-export type TProps = {
+export type TInputProps = {
   name: string;
   style?: string;
   className?: string;

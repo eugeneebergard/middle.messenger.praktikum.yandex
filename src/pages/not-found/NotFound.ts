@@ -1,9 +1,9 @@
 import { Block } from '@/core/Block';
 import notFoundTmpl from './notFound.hbs?raw';
 
-type TProps = Record<string, unknown>;
-export class NotFound extends Block<TProps> {
-  constructor(props: TProps) {
+type TNotFoundProps = Record<string, unknown>;
+export class NotFound extends Block<TNotFoundProps> {
+  constructor(props: TNotFoundProps) {
     super({ ...props });
   }
 

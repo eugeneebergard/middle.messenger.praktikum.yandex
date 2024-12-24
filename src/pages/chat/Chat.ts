@@ -3,9 +3,9 @@ import chatTmpl from './chat.hbs?raw';
 import { chatData } from '@/constants/mock';
 import { currentChatData } from '@/constants/mock';
 
-type TProps = Record<string, unknown>;
-export class Chat extends Block<TProps> {
-  constructor(props: TProps) {
+type TChatProps = Record<string, unknown>;
+export class Chat extends Block<TChatProps> {
+  constructor(props: TChatProps) {
     super({ ...props, chatData, currentChatData });
   }
 

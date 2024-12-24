@@ -1,14 +1,10 @@
 import { Block } from '@/core/Block';
+import { TAvatarProps } from './avatar.types.ts';
 import avatarTmpl from './avatar.hbs?raw';
 import './avatar.scss';
 
-type TProps = {
-  avatar: string;
-  size: string;
-};
-
-export class Avatar extends Block<TProps> {
-  constructor(props: TProps) {
+export class Avatar extends Block<TAvatarProps> {
+  constructor(props: TAvatarProps) {
     super({ ...props });
   }
 

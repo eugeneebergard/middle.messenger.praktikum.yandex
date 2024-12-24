@@ -1,5 +1,5 @@
 import { TOptions, TRequestOptions, METHODS } from './XHRSuper.types';
-import { queryStringify } from '@/utils';
+import { queryStringify } from '../helpers';
 
 export class XHRSuper {
   get = (url: string, options: TOptions = {}): Promise<XMLHttpRequest> => {

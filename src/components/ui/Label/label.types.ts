@@ -1,4 +1,4 @@
-export type TProps = {
+export type TLabelProps = {
   name: string;
   text: string;
 };
