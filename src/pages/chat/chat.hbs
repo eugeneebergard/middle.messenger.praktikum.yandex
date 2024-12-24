@@ -5,32 +5,32 @@
         <a class="link" href="/profile">Профиль</a>
       </div>
       <div class="search-container">
-        {{{Input name="search" className="search" style="chat-input" placeholder="Поиск" }}}
+        {{{Input name="search" className="search" style="chat-input" placeholder="Поиск"}}}
       </div>
     </div>
     <ul class="chat-list">
       {{#each chatData.chats}}
-        {{{ChatItem chatItem=this }}}
+        {{{ChatItem chatItem=this}}}
       {{/each}}
     </ul>
   </div>
   <div class="chat-area">
     <div class="chat-header">
       <div class="person-info">
-        {{{Avatar avatar=currentChatData.companion.avatar size="34px" }}}
+        {{{Avatar avatar=currentChatData.companion.avatar size="34px"}}}
         <h4 class="name">{{ currentChatData.companion.name }}</h4>
       </div>
-      {{{Button className="options" title="Действия" }}}
+      {{{Button className="options" title="Действия"}}}
     </div>
     <div class="chat-history">
       {{#each currentChatData.history}}
-        {{{ChatMessage chatMessage=this }}}
+        {{{ChatMessage chatMessage=this}}}
       {{/each}}
     </div>
     <form class="chat-form">
-      {{{Button className="attach" title="Прикрепить" }}}
-      {{{Input name="message" className="field-message" style="chat-input" placeholder="Введите сообщение" }}}
-      {{{Button className="send" title="Отправить" }}}
+      {{{Button className="attach" title="Прикрепить"}}}
+      {{{Input name="message" className="field-message" style="chat-input" placeholder="Введите сообщение"}}}
+      {{{Button className="send" title="Отправить"}}}
     </form>
   </div>
 </main>

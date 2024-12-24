@@ -1,0 +1,8 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

@@ -5,79 +5,35 @@
   <div class="content">
     <div class="container">
       <div class="heading">
-        {{{Avatar avatar=userData.avatar size="130px" }}}
+        {{{Avatar avatar=userData.avatar size="130px"}}}
         <input class="file-upload hidden" name="avatar" type="file" accept="image/*"/>
         <h3 class="name-title">{{ userData.name }}</h3>
       </div>
 
       <form class="info-form">
         <div class="grid-container">
-          <div class="field">
-            {{{Label name="email" text="Электронная почта" }}}
-            {{{Input name="email" type="email" value=userData.email className="disable" disabled="true" required="true" }}}
-            {{{ErrorMessage }}}
-          </div>
-
-          <div class="field">
-            {{{Label name="login" text="Логин" }}}
-            {{{Input name="login" value=userData.login className="disable" disabled="true" required="true" }}}
-            {{{ErrorMessage }}}
-          </div>
-
-          <div class="field">
-            {{{Label name="first_name" text="Имя" }}}
-            {{{Input name="first_name" value=userData.first_name className="disable" disabled="true" required="true" }}}
-            {{{ErrorMessage }}}
-          </div>
-
-          <div class="field">
-            {{{Label name="second_name" text="Фамилия" }}}
-            {{{Input name="second_name" value=userData.second_name className="disable" disabled="true" required="true" }}}
-            {{{ErrorMessage }}}
-          </div>
-
-          <div class="field">
-            {{{Label name="display_name" text="Никнейм" }}}
-            {{{Input name="display_name" value=userData.display_name className="disable" disabled="true" }}}
-            {{{ErrorMessage }}}
-          </div>
-
-          <div class="field">
-            {{{Label name="phone" text="Номер телефона" }}}
-            {{{Input name="phone" type="number" value=userData.phone className="disable" disabled="true" required="true" }}}
-            {{{ErrorMessage }}}
-          </div>
+          {{{Field name="email" type="email" value=userData.email required="true" disabled="true" textLabel="Электронная почта"}}}
+          {{{Field name="login" value=userData.login required="true" disabled="true" textLabel="Логин"}}}
+          {{{Field name="first_name" value=userData.first_name required="true" disabled="true" textLabel="Имя"}}}
+          {{{Field name="second_name" value=userData.second_name required="true" disabled="true" textLabel="Фамилия"}}}
+          {{{Field name="display_name" value=userData.display_name required="true" disabled="true" textLabel="Никнейм"}}}
+          {{{Field name="phone" value=userData.phone required="true" disabled="true" textLabel="Номер телефона"}}}
         </div>
 
-        {{{Button type="submit" className="submit hidden" style="primary" text="Сохранить" }}}
+        {{{Button type="submit" className="submit hidden" style="primary" text="Сохранить"}}}
       </form>
 
       <div class="controls">
-        {{{Button className="button edit-info" style="primary-link" text="Изменить данные" }}}
-        {{{Button className="button edit-password" style="primary-link" text="Изменить пароль" }}}
-        {{{Button className="button logout" style="danger-link" text="Выйти" }}}
+        {{{Button className="button edit-info" style="primary-link" text="Изменить данные"}}}
+        {{{Button className="button edit-password" style="primary-link" text="Изменить пароль"}}}
+        {{{Button className="button logout" style="danger-link" text="Выйти"}}}
       </div>
 
       <form class="password-form hidden">
-        <div class="field">
-          {{{Label name="oldPassword" text="Пароль" }}}
-          {{{Input name="oldPassword" type="password" required="true" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        <div class="field">
-          {{{Label name="newPassword" text="Новый пароль" }}}
-          {{{Input name="newPassword" type="password" required="true" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        <div class="field">
-          {{{Label name="repeatPassword" text="Повторите пароль" }}}
-          {{{Input name="repeatPassword" type="password" required="true" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        {{{Button type="submit" className="submit" style="primary" text="Сохранить" }}}
+        {{{Field name="oldPassword" type="password" autocomplete="on" textLabel="Пароль" required="true"}}}
+        {{{Field name="newPassword" type="password" autocomplete="on" textLabel="Новый пароль" required="true"}}}
+        {{{Field name="repeatPassword" type="password" autocomplete="on" textLabel="Повторите пароль" required="true"}}}
+        {{{Button type="submit" className="submit" style="primary" text="Сохранить"}}}
       </form>
     </div>
   </div>

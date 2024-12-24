@@ -2,51 +2,16 @@
   <div class="container">
     <h1 class="title">Регистрация</h1>
     <form class="form">
-      <div class="field">
-        {{{Label name="email" text="Электронная почта" }}}
-        {{{Input name="email" type="email" }}}
-        {{{ErrorMessage }}}
-      </div>
-
+      {{{Field name="email" type="email" textLabel="Электронная почта"}}}
       <div class="grid-container">
-        <div class="field">
-          {{{Label name="first_name" text="Имя" }}}
-          {{{Input name="first_name" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        <div class="field">
-          {{{Label name="second_name" text="Фамилия" }}}
-          {{{Input name="second_name" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        <div class="field">
-          {{{Label name="login" text="Логин" }}}
-          {{{Input name="login" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        <div class="field">
-          {{{Label name="phone" text="Номер телефона" }}}
-          {{{Input name="phone" type="number" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        <div class="field">
-          {{{Label name="password" text="Пароль" }}}
-          {{{Input name="password" type="password" autocomplete="on" }}}
-          {{{ErrorMessage }}}
-        </div>
-
-        <div class="field">
-          {{{Label name="repeatPassword" text="Повторите пароль" }}}
-          {{{Input name="repeatPassword" type="password" autocomplete="on" }}}
-          {{{ErrorMessage }}}
-        </div>
+        {{{Field name="first_name" textLabel="Имя"}}}
+        {{{Field name="second_name" textLabel="Фамилия"}}}
+        {{{Field name="login" textLabel="Логин"}}}
+        {{{Field name="phone" type="number" textLabel="Номер телефона"}}}
+        {{{Field name="password" type="password" autocomplete="on" textLabel="Пароль"}}}
+        {{{Field name="repeatPassword" type="password" autocomplete="on" textLabel="Повторите пароль"}}}
       </div>
-
-      {{{Button type="submit" className="button" style="primary" text="Зарегестрироваться" }}}
+      {{{Button type="submit" className="button" style="primary" text="Зарегестрироваться"}}}
     </form>
     <a class="link" href="/sign-in">Войти</a>
   </div>
