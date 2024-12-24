@@ -41,13 +41,6 @@
     }
   }
 
-  .error {
-    @include default-error;
-
-    position: absolute;
-    bottom: -16px;
-  }
-
   .button {
     margin: 67px auto 0;
     width: 280px;

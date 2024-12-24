@@ -36,11 +36,6 @@
   }
 }
 
-@mixin default-error {
-  font-size: 10px;
-  color: $error-color;
-}
-
 @mixin default-link {
   @include reset-link;
   @include transition;

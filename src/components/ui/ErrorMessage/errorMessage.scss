@@ -1,0 +1,9 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
+
+.error-message {
+  position: absolute;
+  bottom: -16px;
+  font-size: 10px;
+  color: $error-color;
+}

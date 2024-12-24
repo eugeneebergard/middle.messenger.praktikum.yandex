@@ -35,13 +35,6 @@
     margin-bottom: 30px;
   }
 
-  .error {
-    @include default-error;
-
-    position: absolute;
-    bottom: -16px;
-  }
-
   .button {
     margin: 127px auto 0;
     width: 100%;
