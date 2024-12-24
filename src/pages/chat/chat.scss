@@ -81,7 +81,15 @@
     }
 
     .chat-history {
-      height: calc(100vh - 120px);
+      @include default-scrollbar;
+
+      height: calc(100vh - 160px);
+      padding: 20px;
+      overflow: hidden auto;
+
+      .chat-message:not(:last-child) {
+        padding-bottom: 15px;
+      }
     }
 
     .chat-form {

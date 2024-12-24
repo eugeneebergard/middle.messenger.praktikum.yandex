@@ -5,7 +5,7 @@ import './avatar.scss';
 type TProps = {
   avatar: string;
   size: string;
-}
+};
 
 export class Avatar extends Block<TProps> {
   constructor(props: TProps) {

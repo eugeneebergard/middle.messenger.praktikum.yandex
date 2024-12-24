@@ -1,6 +1,6 @@
 export type TProps = {
   name: string;
   text: string;
-  style?: string;
+  className?: string;
   required?: string;
 };

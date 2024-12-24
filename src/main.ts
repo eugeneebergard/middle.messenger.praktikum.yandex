@@ -8,6 +8,7 @@ import { ServerError } from '@/pages/server-error';
 import { NotFound } from '@/pages/not-found';
 import { renderRoot } from '@/core/helpers';
 import { registerAllComponents } from '@/components';
+import { registerAllHelpers } from '@/core/helpers';
 
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  registerAllHelpers();
   registerAllComponents();
   renderRoot(currentPage());
 });

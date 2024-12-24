@@ -88,3 +88,14 @@
     background-repeat: no-repeat;
   }
 }
+
+@mixin default-scrollbar() {
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+    border-radius: 4px;
+  }
+}

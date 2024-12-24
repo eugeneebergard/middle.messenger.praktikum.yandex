@@ -1,0 +1,40 @@
+@use '@/styles/variables' as *;
+
+.chat-message {
+  display: flex;
+
+  .chat-message-container {
+    display: inline-block;
+    padding: 11px;
+    position: relative;
+    max-width: 400px;
+    border-radius: 15px;
+  }
+
+  &.mine {
+    justify-content: end;
+
+    .chat-message-container {
+      background-color: $chat-message-mine-color;
+    }
+  }
+
+  &.companion {
+    justify-content: start;
+
+    .chat-message-container {
+      background-color: $chat-message-companion-color;
+    }
+  }
+
+  .text {
+    margin: 0;
+  }
+
+  .time {
+    font-size: 9px;
+    color: $secondary-color;
+    float: right;
+    margin: 7px 0 0 7px
+  }
+}
